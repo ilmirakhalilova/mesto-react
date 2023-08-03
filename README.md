@@ -1,6 +1,6 @@
 # Проект: Mesto-React
 
-[Ссылка на GitHub](https://ilmirakhalilova.github.io/mesto/)
+[Ссылка на GitHub](https://ilmirakhalilova.github.io/mesto-react/)
 
 **Описание**
 
