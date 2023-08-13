@@ -54,7 +54,7 @@ class Api {
       .then(this._checkResponse);
   }
 
-  deleteMyLike(cardId) { //DELETE
+  /*deleteMyLike(cardId) { //DELETE
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
       method: 'DELETE',
       headers: this._headers
@@ -68,15 +68,23 @@ class Api {
       headers: this._headers
     })
       .then(this._checkResponse);
-  }
+  }*/
 
-  changeUserAvatar(avatar) { //PATCH
+  setUserAvatar(avatar) { //PATCH //бывшая changeUserAvatar
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify(avatar)
     })
       .then(this._checkResponse);
+  }
+
+  changeLikeCardStatus(cardId, isLiked) {
+    return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+      method: isLiked ? 'PUT' : 'DELETE',
+      headers: this._headers
+    })
+    .then(this._checkResponse);
   }
 }
 
